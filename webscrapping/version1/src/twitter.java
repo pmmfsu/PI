@@ -28,7 +28,7 @@ public class twitter {
             Query query = new Query("Portugal");
             QueryResult result = twitter.search(query);
             for (Status status : result.getTweets()) {
-                System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText() + " - " + status.getCreatedAt());
+                System.out.println(status.getText() + " - " + status.getCreatedAt());
             }
 /*
             String[] urls = new String[]{"https://www.tripadvisor.pt/Attraction_Review-g189102-d536521-Reviews-Castelo_de_Beja-Beja_Beja_District_Alentejo.html", "https://www.tripadvisor.pt/Attraction_Review-g189102-d3912127-Reviews-Museu_Regional_de_Beja_Museu_Rainha_D_Leonor-Beja_Beja_District_Alentejo.html",
