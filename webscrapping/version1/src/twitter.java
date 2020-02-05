@@ -26,7 +26,7 @@ public class twitter {
             Twitter twitter = twitterFactory.getInstance();
 
             try {
-                Query query = new Query("Castelo De Beja -filter:retweets");
+                Query query = new Query("Portugal -filter:retweets");
                 QueryResult result;
                 do {
                     result = twitter.search(query);
