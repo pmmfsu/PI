@@ -2,14 +2,34 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import twitter4j.*;
+import twitter4j.conf.ConfigurationBuilder;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 public class twitter {
     public static void main(String[] args) {
         try {
+
+
+            ConfigurationBuilder cf = new ConfigurationBuilder();
+            cf.setDebugEnabled(true)
+                    .setOAuthConsumerKey("7FwMi7SDspcGN8WUekeYkPr9W")
+                    .setOAuthConsumerSecret("xyN3fWJ3nKVb7Gm0fethneTMlY1a0khodouDSBMYdX2sY7BCtL")
+                    .setOAuthAccessToken("1134985944-5q4xhtIpD5dph4cvWYH56e9SIGJUiztwjhbY28r")
+                    .setOAuthAccessTokenSecret("5eFPuAVp6dHml0R8rOgNeifjjGSKdilSC4ANhY59OsEMF");
+
+            TwitterFactory twitterFactory = new TwitterFactory(cf.build());
+            Twitter twitter = twitterFactory.getInstance();
+
+            Query query = new Query("Portugal");
+            QueryResult result = twitter.search(query);
+            for (Status status : result.getTweets()) {
+                System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText() + " - " + status.getCreatedAt());
+            }
 /*
             String[] urls = new String[]{"https://www.tripadvisor.pt/Attraction_Review-g189102-d536521-Reviews-Castelo_de_Beja-Beja_Beja_District_Alentejo.html", "https://www.tripadvisor.pt/Attraction_Review-g189102-d3912127-Reviews-Museu_Regional_de_Beja_Museu_Rainha_D_Leonor-Beja_Beja_District_Alentejo.html",
                     "https://www.tripadvisor.pt/Attraction_Review-g189102-d3906702-Reviews-Nucleo_Museologico-Beja_Beja_District_Alentejo.html", "https://www.guiadacidade.pt/pt/poi-igreja-matriz-de-santa-maria-285346", "https://www.tripadvisor.pt/Attraction_Review-g189158-d246152-Reviews-Se_de_Lisboa_Igreja_de_Santa_Maria_Maior-Lisbon_Lisbon_District_Central_Portugal.html",
@@ -26,7 +46,7 @@ public class twitter {
  */
 
             //id div-total = react-root
-                String url = "https://twitter.com/search?q=Portugal&src=trend_click&f=live";
+             /*   String url = "https://twitter.com/search?q=Portugal";
                 Document dcUrls = Jsoup.connect(url).get();
 
             //
@@ -39,7 +59,7 @@ public class twitter {
 
                 System.out.println(content);
             }
-
+*/
 
 
 
