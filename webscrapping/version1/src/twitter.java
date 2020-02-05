@@ -25,11 +25,53 @@ public class twitter {
             TwitterFactory twitterFactory = new TwitterFactory(cf.build());
             Twitter twitter = twitterFactory.getInstance();
 
-            Query query = new Query("Portugal");
+            try {
+                Query query = new Query("Castelo De Beja -filter:retweets");
+                QueryResult result;
+                do {
+                    result = twitter.search(query);
+                    List<Status> tweets = result.getTweets();
+                    for (Status tweet : tweets) {
+                        System.out.println("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
+                    }
+                } while ((query = result.nextQuery()) != null);
+                System.exit(0);
+            } catch (TwitterException te) {
+                te.printStackTrace();
+                System.out.println("Failed to search tweets: " + te.getMessage());
+                System.exit(-1);
+            }
+
+           /* Query query = new Query("Castelo de Beja");
             QueryResult result = twitter.search(query);
             for (Status status : result.getTweets()) {
                 System.out.println(status.getText() + " - " + status.getCreatedAt());
-            }
+                System.out.println();
+            }*/
+
+/*
+            Query query = new Query();
+            query.setCount(DEFAULT_QUERY_COUNT);
+            query.setLang("en");
+// set the bounding dates
+            query.setSince(sdf.format(startDate));
+            query.setUntil(sdf.format(endDate));
+
+            QueryResult result = searchWithRetry(twitter, query); // searchWithRetry is my function that deals with rate limits
+
+            while (result.getTweets().size() != 0) {
+
+                List<Status> tweets = result.getTweets();
+                System.out.print("# Tweets:\t" + tweets.size());
+                Long minId = Long.MAX_VALUE;
+
+                for (Status tweet : tweets) {
+                    // do stuff here
+                    if (tweet.getId() < minId)
+                        minId = tweet.getId();
+                }
+                query.setMaxId(minId-1);
+                result = searchWithRetry(twitter, query);*/
 /*
             String[] urls = new String[]{"https://www.tripadvisor.pt/Attraction_Review-g189102-d536521-Reviews-Castelo_de_Beja-Beja_Beja_District_Alentejo.html", "https://www.tripadvisor.pt/Attraction_Review-g189102-d3912127-Reviews-Museu_Regional_de_Beja_Museu_Rainha_D_Leonor-Beja_Beja_District_Alentejo.html",
                     "https://www.tripadvisor.pt/Attraction_Review-g189102-d3906702-Reviews-Nucleo_Museologico-Beja_Beja_District_Alentejo.html", "https://www.guiadacidade.pt/pt/poi-igreja-matriz-de-santa-maria-285346", "https://www.tripadvisor.pt/Attraction_Review-g189158-d246152-Reviews-Se_de_Lisboa_Igreja_de_Santa_Maria_Maior-Lisbon_Lisbon_District_Central_Portugal.html",

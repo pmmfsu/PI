@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971aa299-f57e-4084-a2b9-e07e4e4b52cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/twitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/twitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/version1.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,9 +26,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/twitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="18" column="19" selection-start-line="17" selection-start-column="13" selection-end-line="18" selection-end-column="19" />
               <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/twiitertest2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="193" column="32" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -52,6 +63,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/twiitertest2.java" />
         <option value="$PROJECT_DIR$/src/twitter.java" />
       </list>
     </option>
@@ -79,17 +91,6 @@
             <path>
               <item name="version1" type="b2602c69:ProjectViewProjectNode" />
               <item name="version1" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="version1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="version1" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="version1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="version1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -107,7 +108,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580935247409" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580936463823" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/twitter4j/lib/twitter4j-core-4.0.7.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.16015625" />
@@ -127,13 +128,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.twitter">
-    <configuration name="googlemaps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="googlemaps" />
-      <module name="version1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="guiadacidade" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="guiadacidade" />
       <module name="version1" />
@@ -155,6 +149,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="twiitertest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="twiitertest2" />
+      <module name="version1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="twitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="twitter" />
       <module name="version1" />
@@ -165,10 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.twitter" />
+        <item itemvalue="Application.twiitertest2" />
         <item itemvalue="Application.guiadacidade" />
         <item itemvalue="Application.trip" />
         <item itemvalue="Application.tripadvisor" />
-        <item itemvalue="Application.googlemaps" />
       </list>
     </recent_temporary>
   </component>
@@ -288,10 +289,21 @@
     <entry file="file://$PROJECT_DIR$/.idea/libraries/twitter4j.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/twiitertest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="193" column="32" lean-forward="true" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/twitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="18" column="19" selection-start-line="17" selection-start-column="13" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
