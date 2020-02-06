@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class twitter {
     public static void main(String[] args) {
@@ -24,23 +25,188 @@ public class twitter {
 
             TwitterFactory twitterFactory = new TwitterFactory(cf.build());
             Twitter twitter = twitterFactory.getInstance();
+            FileWriter outputFile = new FileWriter("twitter.csv");
+            PrintWriter out = new PrintWriter(outputFile);
 
             try {
-                Query query = new Query("Castelo De Beja -filter:retweets");
-                QueryResult result;
+                Query patrimonios1 = new Query(" Castelo de Beja -filter:retweets");
+
+                Query patrimonios2 = new Query("Museu Regional de Beja -filter:retweets");
+
+                Query patrimonios3 = new Query("Teatro Pax Julia -filter:retweets");
+                Query patrimonios4 = new Query("Núcleo Museológico de Beja -filter:retweets");
+                Query patrimonios5 = new Query("Igreja da Sé de Beja -filter:retweets");
+                Query patrimonios6 = new Query("Capela de Nossa Senhora do Rosário -filter:retweets");
+                Query patrimonios7 = new Query("Ermida De Santo André de Beja -filter:retweets");
+                Query patrimonios8 = new Query("Igreja dos Prazeres de Beja -filter:retweets");
+
+
+
+                QueryResult result1;
+                QueryResult result2;
+                QueryResult result3;
+                QueryResult result4;
+                QueryResult result5;
+                QueryResult result6;
+                QueryResult result7;
+                QueryResult result8;
                 do {
-                    result = twitter.search(query);
-                    List<Status> tweets = result.getTweets();
-                    for (Status tweet : tweets) {
-                        System.out.println("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
+                    result1 = twitter.search(patrimonios1);
+                    System.out.println("Tweet1 ----------------------------------------------");
+
+
+                    List<Status> tweets1 = result1.getTweets();
+
+
+                    for (Status tweet1 : tweets1) {
+
+                        System.out.println("@" + tweet1.getUser().getScreenName() + " ; " + tweet1.getText());
                     }
-                } while ((query = result.nextQuery()) != null);
+
+
+                   // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios1 = result1.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+
+                do {
+                    result2 = twitter.search(patrimonios2);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets2 = result2.getTweets();
+
+
+                    for (Status emma : tweets2) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios2 = result2.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+                do {
+                    result3 = twitter.search(patrimonios3);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets3 = result3.getTweets();
+
+
+                    for (Status emma : tweets3) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios3 = result3.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+                do {
+                    result4 = twitter.search(patrimonios4);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets4 = result4.getTweets();
+
+
+                    for (Status emma : tweets4) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios4 = result4.nextQuery()) != null );
+
+                TimeUnit.SECONDS.sleep(5);
+
+                do {
+                    result5 = twitter.search(patrimonios5);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets5 = result5.getTweets();
+
+
+                    for (Status emma : tweets5) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios5 = result5.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+                do {
+                    result6 = twitter.search(patrimonios6);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets6 = result6.getTweets();
+
+
+                    for (Status emma : tweets6) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios6 = result6.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+                do {
+                    result7 = twitter.search(patrimonios7);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets7 = result7.getTweets();
+
+
+                    for (Status emma : tweets7) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios7 = result7.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+
+                do {
+                    result8 = twitter.search(patrimonios8);
+                    System.out.println("Tweet2 ----------------------------------------------");
+
+                    List<Status> tweets8 = result8.getTweets();
+
+
+                    for (Status emma : tweets8) {
+
+                        System.out.println("@" + emma.getUser().getScreenName() + " ; " + emma.getText());
+                    }
+
+                    // TimeUnit.SECONDS.sleep(5);
+
+
+                } while ((patrimonios8 = result8.nextQuery()) != null );
+                TimeUnit.SECONDS.sleep(5);
+
+
                 System.exit(0);
             } catch (TwitterException te) {
                 te.printStackTrace();
                 System.out.println("Failed to search tweets: " + te.getMessage());
                 System.exit(-1);
             }
+
 
            /* Query query = new Query("Castelo de Beja");
             QueryResult result = twitter.search(query);
