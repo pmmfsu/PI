@@ -17,12 +17,14 @@ public class guiadacidade {
             }
 
              */
+            FileWriter outputFile = new FileWriter("guiadacidade.csv");
+            PrintWriter out = new PrintWriter(outputFile);
             for (int i = 0; i < urls.length; i++) {
                 Document dcUrls = Jsoup.connect(urls[i]).get();
                 Elements links = dcUrls.select("#review_summary");
 
                 for (Element spans : links) {
-                    System.out.println(spans.getElementsByTag("strong").text());
+                    out.println(spans.getElementsByTag("strong").text());
                 }
                 //System.out.println(links.text());
             }
