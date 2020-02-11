@@ -9,7 +9,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jsoup-1.12.1" level="project" />
     <orderEntry type="library" name="twitter4j-core-4.0.7" level="project" />
+
     <orderEntry type="library" name="twitter4j-core-4.0.71" level="project" />
     <orderEntry type="library" name="restfb-1.18.0" level="project" />
+
+    <orderEntry type="library" name="javadoc" level="project" />
+
   </component>
 </module>

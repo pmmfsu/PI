@@ -29,6 +29,7 @@ public class twitter {
             PrintWriter out = new PrintWriter(outputFile);
 
             try {
+
                 Query patrimonios1 = new Query(" Castelo de Beja -filter:retweets");
 
                 Query patrimonios2 = new Query("Museu Regional de Beja -filter:retweets");
@@ -125,6 +126,10 @@ public class twitter {
                 } while ((patrimonios4 = result4.nextQuery()) != null );
 
                 TimeUnit.SECONDS.sleep(5);
+
+
+                Query query = new Query("Portugal -filter:retweets");
+                QueryResult result;
 
                 do {
                     result5 = twitter.search(patrimonios5);
