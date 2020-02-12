@@ -48,7 +48,9 @@ public class guiadacidade {
                 //System.out.println(links.text());
             }
 
-
+            out.flush();
+            out.close();
+            outputFile.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
