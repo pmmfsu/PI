@@ -11,6 +11,9 @@ public class googlemaps {
                     "https://www.guiadacidade.pt/pt/poi-nucleo-museologico-da-rua-do-sembrano-285651","https://www.guiadacidade.pt/pt/poi-igreja-matriz-de-santa-maria-285346","https://maisbeja.blogs.sapo.pt/capela-de-nossa-senhora-do-rosario-158584",
                     "https://www.guiadacidade.pt/pt/poi-ermida-de-santo-andre-285345", "https://www.guiadacidade.pt/pt/poi-igreja-de-nossa-senhora-dos-prazeres-285347"};
 
+            String[] patrimonio = new String[]{"Castelo de Beja", "Museu Regional de Beja",
+                    "Núcleo Museológico de Beja","Igreja matriz de santa maria","capela de nossa senhora do rosario",
+                    "ermida de santo andre", "igreja de nossa-senhora dos prazeres"};
 
 
 

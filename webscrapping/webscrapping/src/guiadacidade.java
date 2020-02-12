@@ -19,8 +19,7 @@ public class guiadacidade {
 
 
             String[] patrimonio = new String[]{"Castelo de Beja", "Museu Regional de Beja",
-                    "Núcleo Museológico de Beja","igreja-matriz-de-santa-maria","",
-                    "", ""};
+                    "Núcleo Museológico de Beja","Igreja matriz de santa maria","capela de nossa senhora do rosario","ermida de santo andre", "igreja-de-nossa-senhora-dos-prazeres"};
 
             /*
             for (String url: urls) {
@@ -31,22 +30,10 @@ public class guiadacidade {
             Date date = new Date();
             Timestamp time = new Timestamp(date.getTime());
           //  String time = new SimpleDateFormat("mm:HH:dd:MM:yyyy'.txt'").format(new Date());
-            FileWriter outputFile = new FileWriter( "castelo" + time.getTime() + ".csv");
-            FileWriter outputFile2 = new FileWriter( "as" + time.getTime() + ".csv");
-            FileWriter outputFile3 = new FileWriter( "12" + time.getTime() + ".csv");
-            FileWriter outputFile4 = new FileWriter( "34" + time.getTime() + ".csv");
-            FileWriter outputFile5 = new FileWriter( "56" + time.getTime() + ".csv");
-            FileWriter outputFile6 = new FileWriter( "12" + time.getTime() + ".csv");
-            FileWriter outputFile7 = new FileWriter( "guiadacidade_" + time.getTime() + ".csv");
-            FileWriter outputFile8 = new FileWriter( "guiadacidade_" + time.getTime() + ".csv");
+            FileWriter outputFile = new FileWriter( "guiaDaCidade_" + time.getTime() + ".csv");
+
             PrintWriter out = new PrintWriter(outputFile);
-            PrintWriter out2 = new PrintWriter(outputFile2);
-            PrintWriter out3 = new PrintWriter(outputFile3);
-            PrintWriter out4 = new PrintWriter(outputFile4);
-            PrintWriter out5 = new PrintWriter(outputFile5);
-            PrintWriter out6 = new PrintWriter(outputFile6);
-            PrintWriter out7 = new PrintWriter(outputFile7);
-            PrintWriter out8 = new PrintWriter(outputFile8);
+
 
             for (int i = 0; i < urls.length; i++) {
                 Document dcUrls = Jsoup.connect(urls[i]).get();
@@ -56,7 +43,7 @@ public class guiadacidade {
                     String rating = spans.getElementsByTag("strong").text();
                     String classificacao = spans.getElementsByTag("em").text();
                     String nr_votos = spans.getElementsByTag("small").text();
-                    out.println(rating  + ";" + classificacao + ";" + nr_votos + ";");
+                    out.println(rating  + ";" + classificacao + ";" + nr_votos + ";" + patrimonio[i]);
                 }
                 //System.out.println(links.text());
             }
