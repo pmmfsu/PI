@@ -19,7 +19,8 @@ public class guiadacidade {
 
 
             String[] patrimonio = new String[]{"Castelo de Beja", "Museu Regional de Beja",
-                    "Núcleo Museológico de Beja","Igreja matriz de santa maria","capela de nossa senhora do rosario","ermida de santo andre", "igreja-de-nossa-senhora-dos-prazeres"};
+                    "Igreja Matriz de santa maria","Igreja da Se","capela de nossa senhora do rosario",
+                    "ermida de santo andre", "igreja de nossa senhora dos prazeres"};
 
             /*
             for (String url: urls) {

@@ -24,8 +24,8 @@ public class tripadvisor {
 
 
             String[] patrimonio = new String[]{"Castelo de Beja", "Museu Regional de Beja",
-                    "Núcleo Museológico de Beja","Igreja Matriz de santa maria","Igreja da Sé","capela de nossa senhora do rosario",
-                    "ermida de santo andre", "igreja de nossa-senhora dos prazeres"};
+                    "Nucleo Museologico de Beja","Igreja Matriz de santa maria","Igreja da Se","capela de nossa senhora do rosario",
+                    "ermida de santo andre", "igreja de nossa senhora dos prazeres"};
 
 /*
             for (String url : urls) {
