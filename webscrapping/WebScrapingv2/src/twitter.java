@@ -18,9 +18,7 @@ public class twitter {
         try {
             Date date = new Date();
             Timestamp time = new Timestamp(date.getTime());
-            String[] patrimonio = new String[]{"Castelo de Beja", "Museu Regional de Beja",
-                    "Nucleo Museologico de Beja","Igreja Matriz de santa maria","Igreja da Se","capela de nossa senhora do rosario",
-                    "ermida de santo andre", "igreja de nossa senhora dos prazeres"};
+
             String [] palavras = new String[]{"Castelo de Beja -filter:retweets", "Museu Regional de Beja -filter:retweets",
                     "Núcleo Museológico de Beja -filter:retweets","Igreja Matriz de santa maria -filter:retweets","Igreja da Sé -filter:retweets","capela de nossa senhora do rosario -filter:retweets",
                     "ermida de santo andre -filter:retweets", "igreja de nossa senhora dos prazeres -filter:retweets"};
@@ -49,12 +47,14 @@ public class twitter {
 
 
                         for (Status tweet1 : tweets1) {
-
-                            out.println("@" + tweet1.getUser().getScreenName() + " ; " + tweet1.getText() + ";" + patrimonio[i]);
+                            int k = i+1;
+                            String s = tweet1.getText().replaceAll("([\\r\\n])", "");
+                            s = s.replaceAll(";", ",");
+                            out.println("@" + tweet1.getUser().getScreenName() + " ; " + s + ";" +tweet1.getCreatedAt()+ ";"+k);
                         }
 
                     } while ((patrimonios = result.nextQuery()) != null );
-                    TimeUnit.MINUTES.sleep(15);
+                   // TimeUnit.MINUTES.sleep(15);
                 }
 
 
