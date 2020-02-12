@@ -34,10 +34,10 @@ public class tripadvisor {
                 Elements commentElement = dcUrls.select(commentSelector);
                 ArrayList<String> comments = new ArrayList<>();
                 Elements elements = dcUrls.select("span.ratingDate");
-                FileWriter outputFile = new FileWriter("trip_tudo.csv");
+                FileWriter outputFile = new FileWriter("tripAdvisor.csv");
                 PrintWriter out = new PrintWriter(outputFile);
 
-                Elements date_of_exp = dcUrls.select("div.prw_rup.prw_reviews_stay_date_hsx");
+                Elements date_of_exp = dcUrls.select("div.prw_rup");
 
                 Elements commentText = dcUrls.select("p.partial_entry");
 
@@ -58,7 +58,7 @@ public class tripadvisor {
                */
 
 
-                            out.println(comment.text() + ";" + elem.text() + ";" + date.text());
+                            out.println(comment.text() + ";" + elem.text() + ";" + date.text() + ";");
                         }
                     }
                 }
