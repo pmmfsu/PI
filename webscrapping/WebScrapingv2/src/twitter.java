@@ -50,7 +50,9 @@ public class twitter {
                             int k = i+1;
                             String s = tweet1.getText().replaceAll("([\\r\\n])", "");
                             s = s.replaceAll(";", ",");
-                            out.println("@" + tweet1.getUser().getScreenName() + " ; " + s + ";" +tweet1.getCreatedAt()+ ";"+k);
+                            Date d = tweet1.getCreatedAt();
+                            Timestamp t = new Timestamp(d.getTime());
+                            out.println("@" + tweet1.getUser().getScreenName() + " ; " + s + ";" +t.getTime()+ ";"+k);
                         }
 
                     } while ((patrimonios = result.nextQuery()) != null );

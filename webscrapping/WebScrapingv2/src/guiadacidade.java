@@ -18,7 +18,7 @@ public class guiadacidade {
                     "https://www.guiadacidade.pt/pt/poi-nucleo-museologico-da-rua-do-sembrano-285651",
                     "https://www.guiadacidade.pt/pt/poi-igreja-matriz-de-santa-maria-285346",
                     "nope",
-                    "https://maisbeja.blogs.sapo.pt/capela-de-nossa-senhora-do-rosario-158584",
+                    "nope",
                     "https://www.guiadacidade.pt/pt/poi-ermida-de-santo-andre-285345",
                     "https://www.guiadacidade.pt/pt/poi-igreja-de-nossa-senhora-dos-prazeres-285347"};
 
