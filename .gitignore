@@ -21,14 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-webscrapping/webscrapping/.idea/workspace.xml
-webscrapping/webscrapping/.idea/misc.xml
-webscrapping/webscrapping/.idea/libraries/jsoup_1_12_1.xml
 
-webscrapping/webscrapping/.idea/libraries/javadoc.xml
-
-webscrapping/webscrapping/.idea/encodings.xml
-
-webscrapping/webscrapping/.idea/libraries/twitter4j_core_4_0_7_javadoc.xml
-webscrapping/webscrapping/.idea/modules.xml
+webscrapping/webscrapping/.idea/
 
