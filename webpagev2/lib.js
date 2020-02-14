@@ -22,8 +22,25 @@ var firebaseConfig2 = {
     messagingSenderId: "329920012519",
     appId: "1:329920012519:web:6b0abee932cebb0d86c242"
 };
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
 function changeGraf() {
+    console.log("inside");
     if (graf === 1) {
+        console.log("inside1");
         google.charts.load('current', {'packages': ['corechart']});
         google.charts.setOnLoadCallback(drawChart);
     }
@@ -73,20 +90,33 @@ $(document).ready(function () {
     for (let i = new Date().getFullYear(); i > 2010; i--) {
         $('#yearpicker').append($('<option />').val(i).html(i));
     }
+
+     pat  = parseInt(getUrlParameter('pat'));
+     graf = parseInt(getUrlParameter('graf'));
+     year = parseInt( getUrlParameter('year'));
+
+    if (pat == null){
+         pat = 1;
+         graf = 1;
+         year = 2020;
+    }
+    $("#pat").val(pat);
+    $("#graph").val(graf);
+    $("#yearpicker").val(year);
+    console.log("Imhere");
     changeGraf();
     $("#pat").change(function () {
         pat = this.value;
         graf = 1;
-        $("#graph").val(1);
-        changeGraf()
+        window.location.href = "index.html?pat=" + pat + "&graf="+graf+"&year="+year;
     });
     $("#graph").change(function () {
         graf = this.value;
-        changeGraf()
+        window.location.href = "index.html?pat=" + pat + "&graf="+graf+"&year="+year;
     });
     $("#yearpicker").change(function () {
         year = this.value;
-        changeGraf()
+        window.location.href = "index.html?pat=" + pat + "&graf="+graf+"&year="+year;
     });
 
 });
