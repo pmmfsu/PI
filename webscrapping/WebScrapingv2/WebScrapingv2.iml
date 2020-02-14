@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jsoup-1.12.1" level="project" />
     <orderEntry type="library" name="twitter4j-core-4.0.7" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-admin:6.12.1" level="project" />
   </component>
 </module>

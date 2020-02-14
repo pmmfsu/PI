@@ -1,3 +1,6 @@
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -5,6 +8,7 @@ import org.jsoup.select.Elements;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
@@ -16,6 +20,18 @@ import java.util.concurrent.TimeUnit;
 public class twitter {
     public static void main(String[] args) {
         try {
+
+            FileInputStream serviceAccount =
+                    new FileInputStream("./ServiceAccountKey.json");
+
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                    .setDatabaseUrl("https://projetointegrado-71528.firebaseio.com")
+                    .build();
+
+            FirebaseApp.initializeApp(options);
+
+
             Date date = new Date();
             Timestamp time = new Timestamp(date.getTime());
 
@@ -56,12 +72,13 @@ public class twitter {
                         }
 
                     } while ((patrimonios = result.nextQuery()) != null );
-                   // TimeUnit.MINUTES.sleep(15);
+                    TimeUnit.MINUTES.sleep(5);
                 }
 
 
 
-                System.exit(0);
+                out.close();
+                outputFile.close();
             } catch (TwitterException te) {
                 te.printStackTrace();
                 System.out.println("Failed to search tweets: " + te.getMessage());
