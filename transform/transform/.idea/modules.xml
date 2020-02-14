@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WebScrapping.iml" filepath="$PROJECT_DIR$/WebScrapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transform.iml" filepath="$PROJECT_DIR$/transform.iml" />
     </modules>
   </component>
 </project>
