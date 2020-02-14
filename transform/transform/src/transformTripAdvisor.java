@@ -18,7 +18,8 @@ import java.util.concurrent.ExecutionException;
 public class transformTripAdvisor {
     public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
         FileInputStream serviceAccount =
-                new FileInputStream("./ServiceAccountKey.json");
+                   new FileInputStream("./ServiceAccountKey.json");
+
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
